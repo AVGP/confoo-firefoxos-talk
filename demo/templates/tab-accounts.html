@@ -1,0 +1,15 @@
+<ion-view title="Accounts">
+  <ion-nav-buttons side="right">
+    <a class="button icon ion-plus-circled" href="#/tab/accounts/new"></a>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header padding" scroll="true" overflow-scroll="true">
+    <ul class="list">
+      <li class="item" ng-repeat="account in accounts">
+        <button style="float: right; color: #444" class="button button-clear" ng-click="delete(account.bankIndex)"><i class="icon ion-close-circled"></i></button>
+        {{account.name}} <br>
+        <span class="">{{account.blz}}</span>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

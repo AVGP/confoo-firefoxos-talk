@@ -1,0 +1,28 @@
+<ion-view title="Notifications">
+  <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+    <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">Back</ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="has-header padding">
+    <h2>Notifications</h2>
+    <form>
+      <label>Notifications for changes above &dollar;{{notificationThreshold}}</label>
+      <div class="range">
+        &dollar;1
+        <input type="range" step="1" min="1" max="500" ng-model="notificationThreshold">
+        &dollar;500;
+      </div>
+      <div class="list">
+          <li class="item item-toggle" ng-repeat="acc in accountSettings">
+            {{acc.name}}
+            <label class="toggle toggle-positive">
+                <input ng-change="save()" ng-model="acc.notify" type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+         </li>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+#confooLogo {
+  position: fixed;
+  left:   10px;
+  bottom: 10px;
+
+  z-index: 2;
+}
+
+.demo {
+  width: 364px;
+  margin: 0 auto;
+}
+
+.overlay {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgb(255, 255 , 255);
+  mix-blend-mode: multiply;
+}
+
+.slide {
+  background-size: cover;
+}

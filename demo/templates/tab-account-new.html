@@ -1,0 +1,27 @@
+<ion-view title="Add account">
+  <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+    <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">Back</ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="has-header padding">
+    <form>
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Login</span>
+          <input type="text" ng-model="bank.user" placeholder="Login">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="bank.pin" placeholder="Password">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Bank code</span>
+          <input type="tel" ng-model="bank.blz" min="10000000" max="99999999" pattern="[0-9]{8}" placeholder="Bank Code">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="button" class="button-positive button-block button" ng-click="addBank()">Add</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

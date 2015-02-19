@@ -1,0 +1,11 @@
+<ion-view title="Overview">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear icon" ng-class="refreshing ? 'ion-refreshing' : 'ion-refresh'" ng-click="refresh()"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header" scroll="true" overflow-scroll="true">
+    <ul class="list">
+      <li class="item" ng-repeat="account in accounts" ng-class="(account.type == 'Bank' ? 'item-divider' : 'item')">{{account.name}} <span class="badge" ng-class="account.balance < 0 ? 'badge-assertive' : 'badge-positive'" ng-show="account.type == 'Account'">{{account.balance}}</span></li>
+    </ul>
+  </ion-content>
+</ion-view>

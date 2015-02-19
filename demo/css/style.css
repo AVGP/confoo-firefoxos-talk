@@ -1,0 +1,43 @@
+input:invalid {
+    box-shadow: none;
+    border-bottom: 1px dashed #faa;
+}
+
+input {
+    transition: ease-in 1s;
+}
+
+input.ng-invalid {
+    border-bottom: 1px dashed #faa;
+}
+
+input.ng-valid {
+    background-color: transparent;
+}
+
+progress {
+    appearance:         none;
+    -moz-appearance:    none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+    box-shadow: 1px 1px 2px #ccc inset;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4a87ee;
+}
+
+progress[value].finished::-webkit-progress-value {
+    background-color: rgb(120,200,120);
+}
+
+progress::-moz-progress-bar {
+    background-color: #4a87ee;
+}
+
+progress[value].finished::-moz-progress-bar {
+    background-color: rgb(120,200,120);
+}
